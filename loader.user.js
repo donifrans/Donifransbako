@@ -19,15 +19,15 @@ function getLatestCommit() {
 		console.dir(data["data"])
 		console.log("hmm: " + data["data"]["object"]["sha"]);
 		sha = data["data"]["object"]["sha"];;
-		window.jQuery.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/launcher.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
+		window.jQuery.get('https://raw.githubusercontent.com/Donifransbako/Agar.io-bot/master/launcher.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
 			var latestVersion = data.replace(/(\r\n|\n|\r)/gm, "");
 			latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 			latestVersion = parseFloat(latestVersion + 0.0000);
-			var script1 = "https://cdn.rawgit.com/Apostolique/Agar.io-bot/" + sha + "/launcher.user.js";
+			var script1 = "https://cdn.rawgit.com/Donifransbako/Agar.io-bot/" + sha + "/launcher.user.js";
 			console.log("Script: " + script1);
 			window.jQuery("body").append('<script type="text/javascript" src="' + script1 + '"></script>');
 		});
-		window.jQuery.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/bot.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
+		window.jQuery.get('https://raw.githubusercontent.com/Donifransbako/Agar.io-bot/master/bot.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
 			var latestVersion = data.replace(/(\r\n|\n|\r)/gm, "");
 			latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 			latestVersion = parseFloat(latestVersion + 0.0000);
@@ -47,13 +47,13 @@ function getLatestCommit() {
 			});
 			window.jQuery("#" + prefix + "Dialog").show();
 		}
-		window.jQuery.get('https://raw.githubusercontent.com/Apostolique/Agar.io-bot/master/loader.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
+		window.jQuery.get('https://raw.githubusercontent.com/Donifransbako/Agar.io-bot/master/loader.user.js?' + Math.floor((Math.random() * 1000000) + 1), function(data) {
 			var latestVersion = data.replace(/(\r\n|\n|\r)/gm, "");
 			latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 			latestVersion = parseFloat(latestVersion + 0.0000);
 			var myVersion = parseFloat(aposLoaderVersion + 0.0000);
 			if (latestVersion > myVersion) {
-				update("aposLoader", "loader.user.js", "https://github.com/Apostolique/Agar.io-bot/blob/master/loader.user.js/");
+				update("aposLoader", "loader.user.js", "https://github.com/Donifransbako/Agar.io-bot/blob/master/loader.user.js/");
 			}
 			console.log('Current loader.user.js Version: ' + myVersion + " on Github: " + latestVersion);
 		});
