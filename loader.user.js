@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name        Donifransbako
 // @namespace   Donifransbako
-// @description Happy BOT :V :V .
+// @description Grabs latest versions of the bot scripts automatically.
 // @include     http://agar.io/
 // @version     1.3
 // @grant       none
-// @author      http://www.facebook.com/donifransbako1
+// @author      http://www.facebook.com/donifransbako
 // ==/UserScript==
-var aposLoaderVersion = 1.3;
+var DonifransbakoVersion = 1.3;
 var sha = "efde0488cc2cc176db48dd23b28a20b90314352b";
 
 function getLatestCommit() {
@@ -31,7 +31,7 @@ function getLatestCommit() {
 			var latestVersion = data.replace(/(\r\n|\n|\r)/gm, "");
 			latestVersion = latestVersion.substring(latestVersion.indexOf("// @version") + 11, latestVersion.indexOf("// @grant"));
 			latestVersion = parseFloat(latestVersion + 0.0000);
-			var script2 = "https://cdn.rawgit.com/Apostolique/Agar.io-bot/" + sha + "/bot.user.js";
+			var script2 = "https://cdn.rawgit.com/Donifransbako/Agar.io-bot/" + sha + "/bot.user.js";
 			console.log("Script: " + script2);
 			window.jQuery("body").append('<script type="text/javascript" src="' + script2 + '"></script>');
 		});
