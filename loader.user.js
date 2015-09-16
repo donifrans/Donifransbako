@@ -1,18 +1,18 @@
 // ==UserScript==
-// @name        AposLoader
-// @namespace   AposLoader
-// @description Grabs latest versions of the bot scripts automatically.
+// @name        Donifransbako
+// @namespace   Donifransbako
+// @description Happy BOT :V :V .
 // @include     http://agar.io/
 // @version     1.3
 // @grant       none
-// @author      http://www.twitch.tv/apostolique
+// @author      http://www.facebook.com/donifransbako1
 // ==/UserScript==
 var aposLoaderVersion = 1.3;
 var sha = "efde0488cc2cc176db48dd23b28a20b90314352b";
 
 function getLatestCommit() {
 	window.jQuery.ajax({
-		url: "https://api.github.com/repos/apostolique/Agar.io-bot/git/refs/heads/master",
+		url: "https://api.github.com/repos/Donifransbako/Agar.io-bot/git/refs/heads/master",
 		cache: false,
 		dataType: "jsonp"
 	}).done(function(data) {
